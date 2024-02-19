@@ -31,6 +31,7 @@ app.set('view engine', 'ejs');
 
 // Middlewares
 //Maneja informacion de subida de tipo form-data y maneja archivos(imagenes)
+app.use('/imagenes', express.static(path.join(__dirname, 'imagenes')));
 app.use((req, res, next) => {
     req.upload = upload;
     next();

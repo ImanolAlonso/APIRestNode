@@ -124,7 +124,7 @@ const addLibro = async (req, res) => {
         }
         //Pasar la imagen que recibo a base64 para guardarla en ese formato en la base de datos
         let imagen_blob = fs.readFileSync(imagen_b.path);
-        imagen_blob = imagen_blob.toString('base64');
+        imagen_blob.toString('base64');
         //Fecha actual
         let fecha_insercion = new Date(Date.now());
         let fecha_modificacion = new Date(Date.now());

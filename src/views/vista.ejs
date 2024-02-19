@@ -20,10 +20,7 @@
                         Stock: <%= libro.stock %>
                     </td>
                     <td>
-                        Nombre Imagen: <%= libro.imagen %>
-                    </td>
-                    <td>
-                        <img src="data:image/jpeg;base64,<%= libro.imagen_blob %>" width="150px" height="150px" alt="imagen_blob">
+                       <img src="/imagenes/<%= libro.imagen %>" width="170px" height="150px" alt="imagen_local">
                     </td>
                     <td>
                         Editorial ID: <%= libro.editorial_id %>
