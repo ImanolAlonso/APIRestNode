@@ -61,7 +61,7 @@ const getLibrosMostrar = async (req, res) => {
     try {
         const connection = await getConnection();
         const result = await connection.query("SELECT * FROM libros");
-        res.render('index', { libros: result });
+        res.render('vista', { libros: result });
     } catch (error) { 
         res.status(500);
         res.send(error.message);
