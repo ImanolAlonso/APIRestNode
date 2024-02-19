@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de Libros</h1>
+    <table>
+        
+            <% libros.forEach(libro => { %>
+                <tr>
+                    <td>
+                        ID: <%= libro.id %>
+                    <td>
+                        Nombre: <%= libro.nombre %>
+                    </td>
+                    <td>
+                        Stock: <%= libro.stock %>
+                    </td>
+                    <td>
+                        Nombre Imagen: <%= libro.imagen %>
+                    </td>
+                    <td>
+                        <img src="data:image/jpeg;base64,<%= libro.imagen_blob %>" width="150px" height="150px" alt="imagen_blob">
+                    </td>
+                    <td>
+                        Editorial ID: <%= libro.editorial_id %>
+                    </td>
+                </td>
+            <% }); %>
+            
+    </table>
+</body>
+</html>
