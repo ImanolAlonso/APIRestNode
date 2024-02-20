@@ -13,7 +13,7 @@ const app = express();
 const storage = multer.diskStorage({
     //Donde quiero que se guarde la imagen (ruta)
     destination: function(req, file, cb) {
-        cb(null, 'imagenes/');
+        cb(null, 'src/imagenes/');
     },
     //Con que nombre quiero que se guarde
     filename: function(req, file, cb) {
@@ -30,8 +30,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // Middlewares
-//Maneja informacion de subida de tipo form-data y maneja archivos(imagenes)
+//Maneja las imagenes que se quieran mostrar de forma estatica (leyendolas de una carpeta)
 app.use('/imagenes', express.static(path.join(__dirname, 'imagenes')));
+//Maneja informacion de subida de tipo form-data y maneja archivos(imagenes)
 app.use((req, res, next) => {
     req.upload = upload;
     next();
