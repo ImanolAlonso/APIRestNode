@@ -17,7 +17,7 @@ router.get("/ordenados",parseNone, libroController.getLibrosOrdenados);
 router.get("/", libroController.getLibros);
 router.get("/imagen/:id", libroController.getLibroImagen);
 router.get("/:id", libroController.getLibro);
-router.post("/insertar", (req, res, next) => req.upload.single('imagen_blob')(req, res, next), libroController.addLibro);
+router.post("/aniadir", (req, res, next) => req.upload.single('imagen_blob')(req, res, next), libroController.addLibro);
 router.put("/modificar/:id",parseNone, libroController.updateLibro);
 router.delete("/:id", libroController.deleteLibro);
 
